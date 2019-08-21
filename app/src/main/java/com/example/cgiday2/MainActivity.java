@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,7 @@ ProgressBar mProgressBar;
 
     public void download(View view) {
         Intent serviceIntent = new Intent(MainActivity.this,MusicService.class);
-
+        serviceIntent.setAction(MusicService.ACTION_START_FOREGROUND_SERVICE);
         switch (view.getId()){
             case R.id.buttonDownload:
                 downloadTask = new DownloadTask(mProgressBar);
