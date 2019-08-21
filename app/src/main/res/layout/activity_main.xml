@@ -64,7 +64,6 @@
 
     <TextView
         android:id="@+id/textView"
-        style="@style/textstyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
@@ -75,7 +74,6 @@
 
     <TextView
         android:id="@+id/textView2"
-        style="@style/textstyle"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -92,8 +90,6 @@
         android:layout_marginStart="34dp"
         android:layout_marginTop="41dp"
         android:text="TextView"
-        style="@style/textstyle"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
