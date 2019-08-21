@@ -20,6 +20,8 @@ ProgressBar mProgressBar;
     }
 
     public void download(View view) {
+        Intent serviceIntent = new Intent(MainActivity.this,MusicService.class);
+
         switch (view.getId()){
             case R.id.buttonDownload:
                 downloadTask = new DownloadTask(mProgressBar);
@@ -27,6 +29,13 @@ ProgressBar mProgressBar;
                 break;
             case R.id.button_sms_schedule:
                 scheduleSms();
+                break;
+            case R.id.button_start_service:
+                startService(serviceIntent);
+                break;
+
+            case R.id.button_stop_service:
+                stopService(serviceIntent);
                 break;
         }
 
